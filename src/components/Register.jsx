@@ -1,0 +1,87 @@
+import { Input } from "./Input"
+
+export const Register=()=>{
+    const form={
+        name:{
+            value:'',
+            isValid:false,
+            showError:false
+        },
+        surname:{
+            value:'',
+            isValid:false,
+            showError:false,
+        },
+        cui:{
+            value:'',
+            isValid:false,
+            showError:false
+        },
+        email:{
+            value:'',
+            isValid:false,
+            showError:false
+        },
+        phone:{
+            value:'',
+            isValid:false,
+            showError:false
+        },
+        password:{
+            value:'',
+            isValid:false,
+            showError:false
+        },
+        passwordConfirm:{
+            value:'',
+            isValid:false,
+            showError:false
+        }
+    }
+    
+    return(
+        <>
+        <h1>Registrate</h1>
+        <div>
+            <form>
+                <Input
+                field='name'
+                label='Name'
+                type='text'
+                />
+                <Input
+                field='surname'
+                label='Surname'
+                type='text'
+                />
+                <Input
+                field='cui'
+                label='CUI'
+                type='text'
+                />
+                <Input
+                field='email'
+                label='Email'
+                type='email'
+                />
+                <Input
+                field='phone'
+                label='Phone'
+                type='text'
+                />
+                <Input
+                field='password'
+                label='Password'
+                type='text'
+                />
+                <Input
+                field='passwordConfirm'
+                label='PasswordConfirm'
+                type='password'
+                />
+                <button type='submit'>Enviar</button>
+            </form>
+        </div>
+        </>
+    )
+}
