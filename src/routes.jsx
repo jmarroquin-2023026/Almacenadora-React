@@ -1,8 +1,9 @@
 import { element } from "prop-types";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
-import { AuthPage } from "./pages/auth/AuthPage";
-import { ProductsPage } from "./pages/products/ProductsPage";
+import { AuthPage } from "./pages/AuthPage";
+import { ProductsPage } from "./pages/ProductsPage";
+import { HomePage } from "./pages/HomePage";
 
 export const routes=[
     {
@@ -16,5 +17,9 @@ export const routes=[
     {
         path:'/products',
         element:<ProductsPage/>
+    },
+    {
+        path:'/',
+        element:<HomePage/>
     }
 ]

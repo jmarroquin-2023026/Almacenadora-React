@@ -1,22 +1,24 @@
-import './App.css'
-import { Register } from './components/Register'
-import { Login } from './components/Login'
-import Sidebar from './components/SideBar'
-import Navbar from './components/NavBar'
-import { BrowserRouter as Router, Routes, Route, useRoutes } from 'react-router-dom'
-import { routes } from './routes'
+import './App.css';
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import { routes } from './routes';
+import { Toaster } from 'react-hot-toast';
+import { useRoutes } from 'react-router-dom';
 
 function App() {
-  const elements=useRoutes(routes)
+  const elements = useRoutes(routes);
+  
   return (
     <>
       <Navbar />
       <Sidebar />
-      <div style={{ marginLeft: '200px', padding: '20px' }}>
+      
+      <main className="ml-0 md:ml-64 mt-16 p-5 min-h-[calc(100vh-4rem)]">
         {elements}
-      </div>
+        <Toaster position="bottom-right" />
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
